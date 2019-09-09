@@ -1,19 +1,29 @@
 <html>
+    <head>
+        <title>Landing Page Interaction</title>
+        <script type="text/javascript">
+        // when page loads, run the init funciton
+        window.addEventListener("load", init);
 
-<head>
-  <meta charset="UTF-8">
-  <title></title>
+        // set variables
+        var hd;
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
-  
+        // define init function
+        function init(){
+            hd = document.getElementById("hd");
+            hd.addEventListener("click", changeHeader);
+        }
 
-  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
-</head>
+        // define addition functions
+        function changeHeader(){
+            hd.innerHTML = "Changed"
+        }
 
+        </script>
+    </head>
 
-<body style= "margin: 0">
-  <script src="sketch.js"></script>
-</body>
+    <body>
+        <h1 id="hd" style="position:absolute; top:150px;">This is a header</h1>
 
+    </body>
 </html>
