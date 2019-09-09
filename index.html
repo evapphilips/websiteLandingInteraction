@@ -7,16 +7,22 @@
 
         // set variables
         var hd;
+        var pg;
 
         // define init function
         function init(){
             hd = document.getElementById("hd");
             hd.addEventListener("click", changeHeader);
+            pg = document.getElementById("pg");
+            pg.addEventListener("click", changePg);
         }
 
         // define addition functions
         function changeHeader(){
             hd.innerHTML = "It worked!"
+        }
+        function changePg(){
+            pg.innerHTML = "It worked!"
         }
 
         </script>
@@ -24,6 +30,7 @@
 
     <body>
         <h1 id="hd" style="position:absolute; top:150px;">Click me to test event listener</h1>
+        <p id="pg">Click me to test event listener</p>
 
     </body>
 </html>
